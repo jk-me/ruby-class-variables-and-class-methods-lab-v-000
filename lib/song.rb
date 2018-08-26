@@ -7,7 +7,7 @@ class Song
   
   def initialize(song,artist,genre)
     @@count+=1
-    @name=name
+    @name=song
     @artist=artist
     @genre=genre
     @@genres << genre
@@ -29,7 +29,7 @@ class Song
   
   def self.genres
     x=[]
-    @@genres. each{|genre|
+    @@genres.each{|genre|
       if x.include?(genre) == FALSE
         x << genre
       end}
@@ -37,7 +37,7 @@ class Song
   end 
   
   def self.genre_count 
-    genre.each { |genre|
+    @@genres.each { |genre|
       if @@genre_count.keys.include?(genre)==TRUE
         @@genre_count[genre]+=1 
       else 
