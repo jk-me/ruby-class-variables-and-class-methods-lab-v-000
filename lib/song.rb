@@ -20,7 +20,7 @@ class Song
   
   def self.artists
     x=[]
-    @@artists.each {|a|
+    @@artists.each {|artist|
       if x.include?(artist) == FALSE
         x << artist 
       end}
