@@ -10,12 +10,7 @@ class Song
     @@genres << genre
     @@artists << artist
 
-    if @@genre_count.keys.include?(genre)==TRUE
-      @@genre_count[genre]+=1 
-    else 
-      @@genre_count[genre]=1 
-    end 
-    
+ 
   end
   
   def self.count
@@ -37,7 +32,12 @@ class Song
   end 
   
   def self.genre_count 
-    @@genre_count
+    @@genre_count   if @@genre_count.keys.include?(genre)==TRUE
+      @@genre_count[genre]+=1 
+    else 
+      @@genre_count[genre]=1 
+    end 
+    
   end 
   
   def self.artist_count
