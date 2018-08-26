@@ -9,8 +9,6 @@ class Song
     @@count+=1
     @@genres << genre
     @@artists << artist
-
- 
   end
   
   def self.count
@@ -18,18 +16,21 @@ class Song
   end 
   
   def self.artists
+    x=[]
     @@artists.each {|a|
-      if @@artists.include?(artist) == FALSE
-        @@artists << artist 
-      end 
+      if x.include?(artist) == FALSE
+        x << artist 
+      end}
+    x
   end 
   
   def self.genres
-    X=[]
-    if X.include?(genre) == FALSE
-      X << genre
-
-    end 
+    x=[]
+    @@genres. each{|genre|
+      if x.include?(genre) == FALSE
+        x << genre
+      end}
+    x
   end 
   
   def self.genre_count 
