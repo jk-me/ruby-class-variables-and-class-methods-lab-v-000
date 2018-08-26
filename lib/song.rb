@@ -3,6 +3,7 @@ class Song
   @@artists=[]
   @@genres=[] 
   @@genre_count={}
+  
   attr_accessor :name, :artist, :genre
   
   def initialize(song,artist,genre)
@@ -38,7 +39,7 @@ class Song
   
   def self.genre_count 
     @@genres.each { |genre|
-      if @@genre_count.keys.include?(genre)==TRUE
+      if @@genre_count.keys.include?(genre)
         @@genre_count[genre]+=1 
       else 
         @@genre_count[genre]=1 
@@ -47,6 +48,13 @@ class Song
   end 
   
   def self.artist_count
-    @@artist_count 
+    x={}
+    @@artists.each{ |artist|
+      if x.keys.include?(artist)
+        x[artist]+=1 
+      else 
+        x[artist]=1
+      end}
+    x
   end 
 end
