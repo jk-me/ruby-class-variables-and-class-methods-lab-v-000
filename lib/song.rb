@@ -25,8 +25,9 @@ class Song
   end 
   
   def self.genres
-    if @@genres.include?(genre) == FALSE
-      @@genres << genre
+    X=[]
+    if X.include?(genre) == FALSE
+      X << genre
 
     end 
   end 
